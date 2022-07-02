@@ -32,7 +32,6 @@ const Home: NextPage = () => {
           <CardActionArea>
             <CardMedia
               component="img"
-              maxHeight="160"
               image="https://play-lh.googleusercontent.com/IhUVzRkz5MokalaeiLulcloc8rxROw0fSPRC7-Lc5zCF_wIfhbxo3qsOjKxYp524B1dY"
               alt="AOV"
             />
@@ -50,7 +49,6 @@ const Home: NextPage = () => {
           <CardActionArea>
             <CardMedia
               component="img"
-              maxHeight="160"
               image="https://play-lh.googleusercontent.com/YDas3XR6j4LeWbCr4k9vz-SErhSdY_bLXZY_m5uzZjgGMELXYbZHUkBjkbP6gzhdvRk"
               alt="AOV"
             />
@@ -68,7 +66,6 @@ const Home: NextPage = () => {
           <CardActionArea>
             <CardMedia
               component="img"
-              maxHeight="160"
               image="https://play-lh.googleusercontent.com/YDas3XR6j4LeWbCr4k9vz-SErhSdY_bLXZY_m5uzZjgGMELXYbZHUkBjkbP6gzhdvRk"
               alt="AOV"
             />
