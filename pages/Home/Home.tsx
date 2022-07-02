@@ -11,6 +11,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { minWidth } from '@mui/system';
+import { dataGame } from '../../data/game';
 
 const Home: NextPage = () => {
   return (
@@ -26,61 +28,36 @@ const Home: NextPage = () => {
       <main style={{paddingTop : 40}}>
 
       <Container maxWidth="lg">
-        <Stack direction="row">
+        <Grid container spacing={{ xs: 2, sm : 4,md: 6,lg : 6,  xl : 6 }} columns={{ xs: 8, sm: 12, md: 16,lg : 20,xl :24 }}>
+          {dataGame.map((item, index) => (
+            <Grid item xs={4} sm={4} md={4} key={index}>
+              
+              <Card sx={{  maxWidth : 190, maxHeight : 240,borderRadius : 2}}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image="https://play-lh.googleusercontent.com/IhUVzRkz5MokalaeiLulcloc8rxROw0fSPRC7-Lc5zCF_wIfhbxo3qsOjKxYp524B1dY"
+                      alt="AOV"
+                    />
+                    <CardContent sx={{height : 80}}>
+                      <Grid container spacing={0} justifyContent="center">
+                      <Typography gutterBottom variant="body1" component="p">
+                        {item.name}
+                      </Typography>
+                      </Grid>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+        </Grid>
+  ))}
+</Grid>
 
-        <Card sx={{ maxWidth: 190, maxHeight :250, borderRadius : 2, margin : 1}}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              image="https://play-lh.googleusercontent.com/IhUVzRkz5MokalaeiLulcloc8rxROw0fSPRC7-Lc5zCF_wIfhbxo3qsOjKxYp524B1dY"
-              alt="AOV"
-            />
-            <CardContent>
-              <Grid container spacing={0} justifyContent="center">
-              <Typography gutterBottom variant="h6" component="article">
-                Mobile Legends
-              </Typography>
-              </Grid>
-            </CardContent>
-          </CardActionArea>
-        </Card>
 
-        <Card sx={{ maxWidth: 190, maxHeight :250, borderRadius : 2, margin : 1}}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              image="https://play-lh.googleusercontent.com/YDas3XR6j4LeWbCr4k9vz-SErhSdY_bLXZY_m5uzZjgGMELXYbZHUkBjkbP6gzhdvRk"
-              alt="AOV"
-            />
-            <CardContent>
-              <Grid container spacing={0} justifyContent="center">
-              <Typography gutterBottom variant="h6" component="article">
-                Free Fire
-              </Typography>
-              </Grid>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+       
 
-        <Card sx={{ maxWidth: 190, maxHeight :250, borderRadius : 2, margin : 1}}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              image="https://play-lh.googleusercontent.com/YDas3XR6j4LeWbCr4k9vz-SErhSdY_bLXZY_m5uzZjgGMELXYbZHUkBjkbP6gzhdvRk"
-              alt="AOV"
-            />
-            <CardContent>
-              <Grid container spacing={0} justifyContent="center">
-              <Typography gutterBottom variant="h6" component="article">
-                Free Fire
-              </Typography>
-              </Grid>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-    
 
-        </Stack>
+
+
       </Container>
 
 
