@@ -1,7 +1,7 @@
 export interface iItemGame {
   id : Number,
   name : String,
-  logo : String
+  logo : string
 }
 
 

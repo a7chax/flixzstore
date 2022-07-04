@@ -7,6 +7,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import styles from '../../styles/Home.module.css'
 import { Box } from '@mui/material';
 import Card from '@mui/material/Card';
+import Avatar from '@mui/material/Avatar';
+
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -23,25 +25,42 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
+      <main>
+
       <CssBaseline />
 
-      <main style={{paddingTop : 40}}>
+      <Container maxWidth="xl">
 
-      <Container maxWidth="lg">
-        <Grid container spacing={{ xs: 2, sm : 4,md: 6,lg : 6,  xl : 6 }} columns={{ xs: 8, sm: 12, md: 16,lg : 20,xl :24 }}>
+        <Stack direction={{xl : "row"}} justifyContent={"center"} alignItems={"center"} spacing={4} marginBottom={20} marginTop={20}>
+          <img
+            style={{borderRadius : 360, width : 200, height : 200}}
+            src={"/images/flixzstore.jpeg"}
+          />
+          <Stack>
+          <Typography gutterBottom variant="h2" component="p">
+            Welcome TO
+          </Typography>
+          <Typography gutterBottom variant="h2" component="p">
+            Flixz Store
+          </Typography>
+          </Stack>
+        </Stack>
+   
+        <Grid container spacing={{ xs: 2, sm : 4,md: 2,lg : 2,  xl : 2 }} columns={{ xs: 8, sm: 12, md: 16,lg : 20,xl :24 }}>
           {dataGame.map((item, index) => (
             <Grid item xs={4} sm={4} md={4} key={index}>
-              
-              <Card sx={{  maxWidth : 190, maxHeight : 240,borderRadius : 2}}>
+              <Card sx={{  maxWidth : 260, maxHeight : 330,borderRadius : 5}}>
                   <CardActionArea>
                     <CardMedia
+                      sx={{borderRadius : 5}}
                       component="img"
-                      image="https://play-lh.googleusercontent.com/IhUVzRkz5MokalaeiLulcloc8rxROw0fSPRC7-Lc5zCF_wIfhbxo3qsOjKxYp524B1dY"
+                      image={item.logo}
                       alt="AOV"
                     />
-                    <CardContent sx={{height : 80}}>
-                      <Grid container spacing={0} justifyContent="center">
-                      <Typography gutterBottom variant="body1" component="p">
+                    <CardContent sx={{height : 80 }}>
+                      <Grid container justifyContent={"center"}>
+                      <Typography gutterBottom variant="body1" component="p" align='center'>
                         {item.name}
                       </Typography>
                       </Grid>
