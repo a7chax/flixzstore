@@ -1,0 +1,172 @@
+import { iItemTopUp } from "../interface";
+
+export const ListTopUpPUBGM : iItemTopUp[] = [
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "105",
+    price : "20.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "131",
+    price : "25.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "156",
+    price : "29.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "263",
+    price : "48.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "368",
+    price : "66.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "394",
+    price : "71.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "530",
+    price : "92.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "660",
+    price : "119.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "825",
+    price : "139.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "926",
+    price : "189.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "972",
+    price : "172.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "1110",
+    price : "189.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "1375",
+    price : "229.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "1650",
+    price : "279.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "1925",
+    price : "319.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "2200",
+    price : "369.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "2475",
+    price : "419.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "2875",
+    price : "459.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "3400",
+    price : "549.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "3700",
+    price : "599.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "3975",
+    price : "649.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "4250",
+    price : "689.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "4525",
+    price : "739.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "4800",
+    price : "749.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "5075",
+    price : "829.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "5350",
+    price : "879.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "5750",
+    price : "919.000",
+  },
+  {
+    currencyName : "UC",
+    currencyImage : "google.com",
+    amount : "6013",
+    price : "969.000",
+  }
+]

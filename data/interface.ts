@@ -7,7 +7,6 @@ export interface iItemGame {
 
 
 export interface iItemTopUp {
-  id : Number,
   currencyName : String
   currencyImage? : String,
   amount? : String,

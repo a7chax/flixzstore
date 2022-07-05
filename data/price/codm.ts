@@ -1,0 +1,136 @@
+import { iItemTopUp } from "../interface";
+
+export const ListTopUpCODM : iItemTopUp[] = [
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "127",
+    price : "19.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "189",
+    price : "28.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "254",
+    price : "38.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "317",
+    price : "47.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "379",
+    price : "56.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "444",
+    price : "65.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "506",
+    price : "74.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "571",
+    price : "84.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "634",
+    price : "93.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "696",
+    price : "102.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "761",
+    price : "111.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "823",
+    price : "120.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "888",
+    price : "130.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "951",
+    price : "139.000",
+  },
+  {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1013",
+    price : "148.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1078",
+    price : "157.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1140",
+    price : "166.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1205",
+    price : "176.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1373",
+    price : "185.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "1690",
+    price : "231.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "2007",
+    price : "277.000", 
+   },
+   {
+    currencyName : "CP",
+    currencyImage : "google.com",
+    amount : "2746",
+    price : "369.000", 
+   },
+]
