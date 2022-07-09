@@ -3,7 +3,7 @@ import { iItemTopUp } from "../interface";
 export const ListTopUpMobileLegend : iItemTopUp[] = [
   {
     currencyName : "Diamond",
-    currencyImage : "google.com",
+    currencyImage : "/images/diamondmlbb.png",
     amount : "86",
     price : "23.000",
   },
