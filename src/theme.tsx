@@ -5,6 +5,9 @@ const theme = createTheme({
     mode: 'dark',
     background : {
       default : "#252525"
+    },
+    primary : {
+      main : "#FEFA07"
     }
   },
   typography : {
