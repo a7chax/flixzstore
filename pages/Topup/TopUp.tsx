@@ -25,7 +25,7 @@ const TopUp : NextPage = () => {
     const [textInput, setTextInput] = useState<String>()
   
   
-    const linkWa = `https://api.whatsapp.com/send?phone=089675905586&text=Nick+%3A+Arungi+Cahaya%0AID+%3A+Arung%0AServer+%3A+12312312%0AOrder+%3A+${textInput}%0ASS+sisa+diamond+UC+%3A+20`
+    const linkWa = `https://api.whatsapp.com/send?phone=6289675905586&text=Nick+%3A+Arungi+Cahaya%0AID+%3A+Arung%0AServer+%3A+12312312%0AOrder+%3A+${textInput}%0ASS+sisa+diamond+UC+%3A+20`
   
 
   const data =() => {
