@@ -202,7 +202,7 @@ const TopUp : NextPage = () => {
       <Grid container spacing={{ xs: 2, sm : 4,md: 2,lg : 2,  xl : 2 }} columns={{ xs: 8, sm: 16, md: 20,lg : 20,xl :20 }}>
       {isReady && data()?.map((item, index) => (
         <Grid item xs={4} sm={4} md={4} key={index}  onClick={() => setSelectedTopup(item)}>
-          <Card sx={item == selectedTopup ? {  maxWidth : 260, maxHeight : 330,borderRadius : 3, border : 2} : {  maxWidth : 260, maxHeight : 330,borderRadius : 3}}>
+          <Card sx={item == selectedTopup ? {  maxWidth : 260, maxHeight : 330,borderRadius : 3, border : 1} : {  maxWidth : 260, maxHeight : 330,borderRadius : 3}}>
               <CardActionArea>
                 <CardContent sx={{maxHeight : 330 }}>
                   <Grid container justifyContent={"center"}>
