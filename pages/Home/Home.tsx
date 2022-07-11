@@ -65,10 +65,9 @@ const Home: NextPage = () => {
           indicators={false}
           sx={{marginBottom : 3, borderRadius : 5}}
           autoPlay={true}
-          showIndicators={false}
           >
-            {dataTopUpPage.map(i =>
-                  <Paper >
+            {dataTopUpPage.map((i, index) =>
+                  <Paper key={index}>
                     <img src={i.image} width={"100%"} height={"100%"}/>
                   </Paper>
             )}

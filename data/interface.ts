@@ -15,7 +15,7 @@ export interface iItemTopUp {
 
 export interface iTopUpPage {
   name : String,
-  image : String,
+  image : string,
   guide : String,
 }
 
