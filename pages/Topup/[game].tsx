@@ -546,7 +546,7 @@ const TopUp : NextPage = () => {
       </Button>
       </a>
       <Typography gutterBottom variant="body2" component="p" sx={{marginTop : 2}} fontWeight={"bold"}>
-          * Jika tombol pastikan data akun sudah terisi dan nominal top up sudah terpilih 
+          * Jika tombo belum bisa di tekan, pastikan kembali data akun sudah terisi dan nominal top up sudah terpilih 
       </Typography>
 
       </Box>
