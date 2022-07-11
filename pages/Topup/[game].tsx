@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import {useState} from 'react'
+import React from 'react'
 import Head from "next/head";
 import Image from "next/image";
-import { Box, Button, Container, Divider, Fab, Grid, Stack, TextField } from '@mui/material';
+import { Box, Button, Container, Divider, Fab, Grid, Paper, Stack, TextField } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import CardContent from '@mui/material/CardContent';
@@ -44,11 +44,11 @@ const TopUp : NextPage = () => {
   const {query, isReady} = router
   console.log(query)
   
-    const [selectedTopup, setSelectedTopup] = useState<iItemTopUp>()
-    const [textInput, setTextInput] = useState<String>()
-    const [textInput2, setTextInput2] = useState<String>()
-    const [textInput3, setTextInput3] = useState<String>()
-    const [isDataTopUpReady, setIsDataTopUpReady] = useState<Boolean>(false)
+    const [selectedTopup, setSelectedTopup] = React.useState<iItemTopUp>()
+    const [textInput, setTextInput] = React.useState<String>()
+    const [textInput2, setTextInput2] = React.useState<String>()
+    const [textInput3, setTextInput3] = React.useState<String>()
+    const [isDataTopUpReady, setIsDataTopUpReady] = React.useState<Boolean>(false)
 
     const selectDataTopUpPage = (gameName : String) : iTopUpPage[] =>{
       var data = dataTopUpPage.filter(i => {
@@ -85,7 +85,25 @@ const TopUp : NextPage = () => {
       return formatOnlyID
     }
 
-    const linkWa = `https://api.whatsapp.com/send/?phone=%2B6281274489306&text=${formatMessage(query.name as string)}`
+    const disabledButton = (gameName : String) : boolean =>  {
+
+      if(gameName === 'Mobile Legend') {
+
+        return !textInput || !textInput2 || !textInput3 || !selectedTopup
+      }
+
+      if(gameName === "PUBG Mobile"){
+        return !textInput || !textInput2 && !selectedTopup
+      }
+
+      if(gameName === "Genshin Impact" || "Mobile Legend Adventure" || "Garena Free Fire"){
+        return !textInput || !textInput2 || !selectedTopup
+      }
+
+      return !textInput ||  !selectedTopup
+    }
+
+    const linkWa = `https://api.whatsapp.com/send/?phone=%2B6289675905586&text=${formatMessage(query.name as string)}`
   
 
   const data =() => {
@@ -202,26 +220,29 @@ const TopUp : NextPage = () => {
       <Grid container spacing={{ xs: 2, sm : 4,md: 2,lg : 2,  xl : 2 }} columns={{ xs: 8, sm: 16, md: 20,lg : 20,xl :20 }}>
       {isReady && data()?.map((item, index) => (
         <Grid item xs={4} sm={4} md={4} key={index}  onClick={() => setSelectedTopup(item)}>
-          <Card sx={item == selectedTopup ? {  maxWidth : 260, maxHeight : 330,borderRadius : 3, border : 1} : {  maxWidth : 260, maxHeight : 330,borderRadius : 3}}>
+          <Paper  sx={item == selectedTopup ? {  maxWidth : 260, maxHeight : 330,borderRadius : 3, backgroundColor : "#FEFA07"} : {  maxWidth : 260, maxHeight : 330,borderRadius : 3}}>
               <CardActionArea>
                 <CardContent sx={{maxHeight : 330 }}>
                   <Grid container justifyContent={"center"}>
                     <Stack>
 
-                      <Typography  variant="body1" component="p" align='center' >
+                      <Typography  variant="body1" component="p" align='center' fontWeight={"bold"} color={item == selectedTopup ? "black" : "white" } >
                       {item.amount}  {item.currencyName}
                       </Typography>
                       
-                      <hr style={{width : "100%"}}/>
+                      <hr style={ item == selectedTopup ? 
+                      {width : "100%", height : 2,backgroundColor : "black", display: "block",borderColor : "black"} : 
+                      {width : "100%", height : 2,backgroundColor : "white", display: "block",borderColor : "white"}
+                      }/>
 
-                      <Typography gutterBottom variant="body1" component="p" align='center'  fontWeight={"bold"}>
+                      <Typography gutterBottom variant="body1" component="p" align='center'  fontWeight={"bold"} color={item == selectedTopup ? "black" : "white" }>
                         Rp. {item.price}
                       </Typography>
                     </Stack>
                   </Grid>
                 </CardContent>
               </CardActionArea>
-            </Card>
+            </Paper>
         </Grid>
   
       ))}
@@ -503,7 +524,7 @@ const TopUp : NextPage = () => {
           Beli
       </Typography>
       
-      <Accordion>
+      <Accordion >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -513,18 +534,20 @@ const TopUp : NextPage = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+              {`Nominal Topup dan data akun diatas akan di lanjutkan ke whatsapp`}
           </Typography>
+          <img/>
         </AccordionDetails>
       </Accordion>
 
       <a target="_blank" href={linkWa} rel="noopener noreferrer">
-      <Button fullWidth color={"primary"}  variant="contained"> 
+      <Button sx={{marginTop : 4}} fullWidth color={"primary"}  variant="contained" disabled={disabledButton(query.game as string)}> 
             Beli Sekarang
       </Button>
       </a>
-
+      <Typography gutterBottom variant="body2" component="p" sx={{marginTop : 2}} fontWeight={"bold"}>
+          * Jika tombol pastikan data akun sudah terisi dan nominal top up sudah terpilih 
+      </Typography>
 
       </Box>
 
