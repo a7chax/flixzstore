@@ -1,7 +1,7 @@
 import { iItemTopUp } from "../interface";
 
 
-export const ListTopUpSuperSu : iItemTopUp[] = [
+export const ListTopUpSuperSus : iItemTopUp[] = [
   {
     currencyName : "Gold Star",
     currencyImage : "google.com",

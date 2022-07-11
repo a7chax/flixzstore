@@ -1,7 +1,7 @@
 import { iItemTopUp } from "../interface";
 
 
-export const ListTopUpCODM : iItemTopUp[] = [
+export const ListTopUpApexm : iItemTopUp[] = [
   {
     currencyName : "Syndicate Gold",
     currencyImage : "google.com",

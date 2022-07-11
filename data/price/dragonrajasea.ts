@@ -1,7 +1,7 @@
 import { iItemTopUp } from "../interface";
 
 
-export const ListTopDJSEA : iItemTopUp[] = [
+export const ListTopUpDJSEA : iItemTopUp[] = [
   {
     currencyName : "Coupons",
     currencyImage : "google.com",

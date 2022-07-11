@@ -12,6 +12,9 @@ const theme = createTheme({
   },
   typography : {
     fontFamily: "Open Sans",
+    button : {
+      fontWeight : "bold"
+    }
   }
 });
 

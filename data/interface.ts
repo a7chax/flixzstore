@@ -12,3 +12,10 @@ export interface iItemTopUp {
   amount? : String,
   price : String,
 }
+
+export interface iTopUpPage {
+  name : String,
+  image : String,
+  guide : String,
+}
+

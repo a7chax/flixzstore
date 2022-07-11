@@ -38,7 +38,7 @@ export const dataGame : iItemGame[] = [
   },
   {
     id : 8,
-    name : "League of Legend : \n Wild Rift",
+    name : "LOL : Wild Rift",
     logo : "/images/wildrift.png"
   },
   {

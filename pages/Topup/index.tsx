@@ -1,3 +1,3 @@
-import TopUp from "./TopUp";
+import TopUp from "./[game]";
 
 export default TopUp

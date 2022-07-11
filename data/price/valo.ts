@@ -1,6 +1,6 @@
 import { iItemTopUp } from "../interface";
 
-export const ListTopUpFreeFire : iItemTopUp[] = [
+export const ListTopUpValo : iItemTopUp[] = [
   {
     currencyName : "Points",
     currencyImage : "google.com",
