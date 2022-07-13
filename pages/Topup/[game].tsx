@@ -88,19 +88,17 @@ const TopUp : NextPage = () => {
     const disabledButton = (gameName : String) : boolean =>  {
 
       if(gameName === 'Mobile Legend') {
-        return !textInput || !textInput2 || !textInput3 || !selectedTopup
-      }
-
-      if(gameName === "PUBG Mobile"){
-        return !textInput || !textInput2 && !selectedTopup
-      }
-
-      if(gameName === "Genshin Impact" || "Mobile Legend Adventure" || "Garena Free Fire"){
+        return !textInput && !textInput2 && !textInput3 && !selectedTopup
+      }else if(gameName === "PUBG Mobile" && "Genshin Impact" && "Mobile Legend Adventure" && "Garena Free Fire"){
         return !textInput || !textInput2 || !selectedTopup
+      }else{
+        return !textInput || !selectedTopup
       }
 
-       return !textInput ||  !selectedTopup
-    }
+
+      
+     }
+
 
     const linkWa = `https://api.whatsapp.com/send/?phone=%2B6289675905586&text=${formatMessage(query.name as string)}`
   
