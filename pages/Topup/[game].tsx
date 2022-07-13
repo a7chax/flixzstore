@@ -105,8 +105,8 @@ const TopUp : NextPage = () => {
     const linkWa = `https://api.whatsapp.com/send/?phone=%2B6289675905586&text=${formatMessage(query.name as string)}`
   
 
-  const data =() => {
-    var dataTemp = []
+  const data =() : any[] => {
+    var dataTemp : any[] = []
     if(query.game === "Mobile Legend"){
       dataTemp = ListTopUpMobileLegend
     }
