@@ -518,54 +518,58 @@ const TopUp : NextPage = () => {
 
       </Box>
 
-
-      <Box sx={{backgroundColor : "#121212", paddingRight : 5, paddingLeft : 5,paddingBottom : 5,paddingTop : 1, marginTop : 5, marginBottom : 5}} borderRadius={2}>
-      <Typography gutterBottom variant="body1" component="p" align='center' sx={{margin : 3}} fontWeight={"bold"}>
-          Beli
-      </Typography>
-      
-      <Accordion >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Proses Topup</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography sx={{marginBottom : 3}}>
-              {`Nominal Topup dan data akun diatas akan di lanjutkan ke whatsapp melalui pesan, dan pembayaran bisa melalui semua ewallet dan QRIS.`}
+      {
+        isReady && (
+          <Box sx={{backgroundColor : "#121212", paddingRight : 5, paddingLeft : 5,paddingBottom : 5,paddingTop : 1, marginTop : 5, marginBottom : 5}} borderRadius={2}>
+          <Typography gutterBottom variant="body1" component="p" align='center' sx={{margin : 3}} fontWeight={"bold"}>
+              Beli
           </Typography>
-          <Typography sx={{marginBottom : 3}}>
-              {`1. Ketika sudah di submit, jika muncul seperti ini klik ke aplikasi whatsapp, dan akan menuju ke aplikasi whatsapp.`}
+          
+          <Accordion >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Proses Topup</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography sx={{marginBottom : 3}}>
+                  {`Nominal Topup dan data akun diatas akan di lanjutkan ke whatsapp melalui pesan, dan pembayaran bisa melalui semua ewallet dan QRIS.`}
+              </Typography>
+              <Typography sx={{marginBottom : 3}}>
+                  {`1. Ketika sudah di submit, jika muncul seperti ini klik ke aplikasi whatsapp, dan akan menuju ke aplikasi whatsapp.`}
+              </Typography>
+              <img
+                src={"/images/help/modalwhatsapp.jpg"}
+                width={200}
+                height={190}
+              />
+    
+              <Typography sx={{marginTop : 3,marginBottom : 3}}>
+                  {`2. Kirim Pesan dan kirim screenshot sisa ${data()[0].currencyName}, dan Topup akan segera di proses.`}
+              </Typography>
+              <img
+                src={"/images/help/whatsapp.jpg"}
+                width={200}
+                height={190}
+              />
+            </AccordionDetails>
+          </Accordion>
+    
+          <a target="_blank" href={linkWa} rel="noopener noreferrer">
+          <Button sx={{marginTop : 4}} fullWidth color={"primary"}  variant="contained" disabled={disabledButton(query.game as string)}> 
+                Beli Sekarang
+          </Button>
+          </a>
+          <Typography gutterBottom variant="body2" component="p" sx={{marginTop : 2}} fontWeight={"bold"}>
+              * Jika tombol belum bisa di tekan, pastikan kembali data akun sudah terisi dan nominal top up sudah terpilih 
           </Typography>
-          <img
-            src={"/images/help/modalwhatsapp.jpg"}
-            width={200}
-            height={190}
-          />
+    
+          </Box>
+        )
+      }
 
-          <Typography sx={{marginTop : 3,marginBottom : 3}}>
-              {`2. Kirim Pesan dan kirim screenshot sisa diamond/uc dan sebagainya, dan Topup akan segera di proses.`}
-          </Typography>
-          <img
-            src={"/images/help/whatsapp.jpg"}
-            width={200}
-            height={190}
-          />
-        </AccordionDetails>
-      </Accordion>
-
-      <a target="_blank" href={linkWa} rel="noopener noreferrer">
-      <Button sx={{marginTop : 4}} fullWidth color={"primary"}  variant="contained" disabled={disabledButton(query.game as string)}> 
-            Beli Sekarang
-      </Button>
-      </a>
-      <Typography gutterBottom variant="body2" component="p" sx={{marginTop : 2}} fontWeight={"bold"}>
-          * Jika tombol belum bisa di tekan, pastikan kembali data akun sudah terisi dan nominal top up sudah terpilih 
-      </Typography>
-
-      </Box>
 
 
 
