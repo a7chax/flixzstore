@@ -88,7 +88,6 @@ const TopUp : NextPage = () => {
     const disabledButton = (gameName : String) : boolean =>  {
 
       if(gameName === 'Mobile Legend') {
-
         return !textInput || !textInput2 || !textInput3 || !selectedTopup
       }
 
@@ -100,14 +99,14 @@ const TopUp : NextPage = () => {
         return !textInput || !textInput2 || !selectedTopup
       }
 
-      return !textInput ||  !selectedTopup
+       return !textInput ||  !selectedTopup
     }
 
     const linkWa = `https://api.whatsapp.com/send/?phone=%2B6289675905586&text=${formatMessage(query.name as string)}`
   
 
   const data =() => {
-    var dataTemp 
+    var dataTemp = []
     if(query.game === "Mobile Legend"){
       dataTemp = ListTopUpMobileLegend
     }
