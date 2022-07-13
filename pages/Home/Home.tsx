@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           /> 
           </a>
           </Link>
-          <Typography  variant="h4" component="p" align='center' fontWeight={"bold"} sx={{ marginLeft : 2}}>Flixz store</Typography>
+          <Typography  variant="h4" component="p" align='center' fontWeight={"bold"} sx={{ marginLeft : 2}}>Flixzstore</Typography>
           </Stack>
         </Grid>
       </Box>
