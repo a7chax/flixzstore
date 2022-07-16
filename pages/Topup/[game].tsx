@@ -554,11 +554,11 @@ const TopUp : NextPage = () => {
             </AccordionDetails>
           </Accordion>
     
-          <a target="_blank" href={linkWa} rel="noopener noreferrer">
           <Button sx={{marginTop : 4}} fullWidth color={"primary"}  variant="contained" disabled={disabledButton(query.game as string)}> 
+          <a target="_blank" href={linkWa} rel="noopener noreferrer" style={{width:"100%"}}>
                 Beli Sekarang
-          </Button>
           </a>
+          </Button>
           <Typography gutterBottom variant="body2" component="p" sx={{marginTop : 2}} fontWeight={"bold"}>
               * Jika tombol belum bisa di tekan, pastikan kembali data akun sudah terisi dan nominal top up sudah terpilih 
           </Typography>
