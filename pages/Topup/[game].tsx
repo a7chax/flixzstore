@@ -87,8 +87,8 @@ const TopUp : NextPage = () => {
 
     const disabledButton = (gameName : String) : boolean =>  {
 
-      if(gameName === 'Mobile Legend') {
-        return !textInput && !textInput2 && !textInput3 && !selectedTopup
+      if(gameName === "Mobile Legend") {
+        return !textInput || !textInput2 || !textInput3 || !selectedTopup
       }else if(gameName === "PUBG Mobile" && "Genshin Impact" && "Mobile Legend Adventure" && "Garena Free Fire"){
         return !textInput || !textInput2 || !selectedTopup
       }else{
