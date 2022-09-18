@@ -61,10 +61,11 @@ const TopUp : NextPage = () => {
 
     const topupPage = selectDataTopUpPage(query.game as string)[0]
 
+    console.log(textInput3)
 
     const formatMessage = (gameName : String) => {
       const formatMessageMlbb = `---Topup ${query.game}---%0aID : ${textInput}%0aServer : ${textInput2}%0aNickname : ${textInput3}%0aOrder : ${selectedTopup?.amount}%0aHarga: ${selectedTopup?.price}%0a(Wajib)Lampirkan SS Sisa ${selectedTopup?.currencyName} : `
-      const formatIdAndServer = `---Topup ${query.game}---%0aID : ${textInput}%0aServer : ${textInput2}%0aNickname : ${textInput3}%0aOrder : ${selectedTopup?.amount}%0aHarga: ${selectedTopup?.price}%0a(Wajib)Lampirkan SS Sisa ${selectedTopup?.currencyName} : `
+      const formatIdAndServer = `---Topup ${query.game}---%0aID : ${textInput}%0aServer : ${textInput2}%0aOrder : ${selectedTopup?.amount}%0aHarga: ${selectedTopup?.price}%0a(Wajib)Lampirkan SS Sisa ${selectedTopup?.currencyName} : `
       const formatIdAndNickname = `---Topup ${query.game}---%0aID : ${textInput}%0aNickName : ${textInput2}%0aOrder : ${selectedTopup?.amount}%0aHarga: ${selectedTopup?.price}%0a(Wajib)Lampirkan SS Sisa ${selectedTopup?.currencyName} : `
       const formatOnlyID = `---Topup ${query.game}---%0aID : ${textInput}%0aOrder : ${selectedTopup?.amount}%0aHarga: ${selectedTopup?.price}%0a(Wajib)Lampirkan SS Sisa ${selectedTopup?.currencyName} : `
 
