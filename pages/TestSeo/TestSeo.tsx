@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head';
 
 function TestSeo() {
@@ -12,7 +13,7 @@ function TestSeo() {
         <h1>Best Italian Restaurants in New York City</h1>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><Link href="/">Home</Link></li>
             <li><a href="/italian-food-guide/">Italian Food Guide</a></li>
           </ul>
         </nav>
@@ -21,9 +22,9 @@ function TestSeo() {
         <section>
           <h2>Top Italian Restaurants in NYC</h2>
           <ul>
-            <li><a href="/italian-restaurants-nyc/joeys-pizza/">Joey's Pizza</a></li>
-            <li><a href="/italian-restaurants-nyc/trattoria-toscana/">Trattoria Toscana</a></li>
-            <li><a href="/italian-restaurants-nyc/l-artusi/">L'Artusi</a></li>
+            <li><Link href="/italian-restaurants-nyc/joeys-pizza/">Joeys Pizza</Link></li>
+            <li><Link href="/italian-restaurants-nyc/trattoria-toscana/">Trattoria Toscana</Link></li>
+            <li><Link href="/italian-restaurants-nyc/l-artusi/">LArtusi</Link></li>
           </ul>
         </section>
         <section>
